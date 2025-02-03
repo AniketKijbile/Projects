@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,141 +5,145 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     display: flex;
-    min-height: 100vh;
     justify-content: center;
-    margin: 0;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #fbfcfd;
-    position: fixed;
-    width: 100%;
-    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    gap: 2rem;
 }
 
-.back-button {
-    text-decoration: double;
-    font-size: 35px;
-    color: #000000;
-    font-weight: bold;
-}
 
 .logo {
-    text-align: center;
-    width: 100%;
+    text-align: center; /* Center the logo */
 }
 
 .logo img {
     width: 100px;
+    transition: transform 0.3s ease;
 }
 
-
 .container {
-    margin-top: 80px; 
     display: flex;
-    width: 100%;
-    height: calc(100vh - 80px); 
-    align-items: center;
-    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
 }
 
 .left-section {
     width: 50%;
+    background: url('pexels-pnw-prod-7624913.jpg') no-repeat center center/cover;
+    position: relative;
 }
 
-.left-section img {
+.left-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
 }
 
+
 .right-section {
-    flex: 1;
     width: 50%;
+    padding: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 #login-form, #otp-form {
-    background-color: white;
-    padding: 20px; 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h2 {
-    margin-bottom: 20px; 
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #555;
 }
 
 input[type="text"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px; /* Reduced margin */
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
+    padding: 12px;
+    background: #007BFF;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: #0056b3;
+    transform: translateY(-2px);
 }
 
-/* Style for the Decathlon section */
 .Tranquell-info {
     margin-top: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    background: #f9f9f9;
+    border-radius: 10px;
     text-align: left;
 }
 
-.Tranquell-info h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.Tranquell-info a {
-    display: inline-block;
-    font-size: 16px;
-    color: #007BFF;
-    text-decoration: none;
-    margin-bottom: 10px;
-}
-
-.Tranquell-info a:hover {
-    text-decoration: underline;
-}
-
 .Tranquell-info p {
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
 }
 
 .Tranquell-info ul {
@@ -149,19 +152,19 @@ button:hover {
 }
 
 .Tranquell-info ul li {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 5px;
+    color: #555;
 }
 
 .error-message {
     color: red;
-    margin-bottom: 100px; /* Adjusted margin */
-    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .success-message {
     color: green;
-    margin-bottom: 100px;
-    gap: 10px;
-
+    margin-bottom: 10px;
+    display: block;
 }

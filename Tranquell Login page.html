@@ -5,49 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login with OTP</title>
     <link rel="stylesheet" href="Tranquell Login page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<header>
-    <a href="Tranquell Home page.html" class="back-button">🏠︎</a>
-    <div class="logo">
-        <img src="logo png.png" alt="Logo">
-    </div>
-</header>
 <body>
+    <header>
+    
+        <div class="logo">
+            <a href="Tranquell Login page.html">
+            <img src="logo png.png" alt="Logo">
+        </a>
+        </div>
+    </header>
     <div class="container">
         <div class="left-section">
-            <img src="C:\web development\pexels-pnw-prod-7624913.jpg" alt="Login Image">
+            <div class="overlay">
+                <h1>Welcome Back!</h1>
+                <p>Sign in to access exclusive sports content and manage your account.</p>
+            </div>
         </div>
         <div class="right-section">
+            <!-- Login Form -->
             <div id="login-form">
                 <h2>Login</h2>
-                <label for="mobile">Mobile Number</label>
-                <input type="text" id="mobile" placeholder="Enter your mobile number">
-                <span id="mobile-error" class="error-message"></span>
-                <button id="send-otp">SEND OTP</button>
-                
+                <form>
+                    <label for="mobile">Mobile Number</label>
+                    <input type="text" id="mobile" placeholder="Enter your mobile number">
+                    <span id="mobile-error" class="error-message"></span>
+                    <button id="send-otp">SEND OTP</button>
+                </form>
 
-<div class="Tranquell-info">
-    <p><strong>It's better when you're signed in</strong></p>
-    <ul>
-        <li>✔️ 365-days returns on TranQuell products</li>
-        <li>✔️ Fast checkout</li>
-        <li>✔️ Track your orders</li>
-        <li>✔️ Access exclusive offers</li>
-    </ul>
-</div>
-
+                <div class="Tranquell-info">
+                    <p><strong>Why Sign In?</strong></p>
+                    <ul>
+                        <li>✔️ 365-days returns on TranQuell products</li>
+                        <li>✔️ Fast checkout</li>
+                        <li>✔️ Track your orders</li>
+                        <li>✔️ Access exclusive offers</li>
+                    </ul>
+                </div>
             </div>
-            <div id="otp-form" style="display:none;">
+
+            <!-- OTP Form -->
+            <div id="otp-form" style="display: none;">
                 <h2>Enter OTP</h2>
-                <label for="otp"></label>
-                <input type="text" id="otp" placeholder="Enter OTP">
-                <span id="otp-error" class="error-message"></span>
-                <button id="verify-otp">Verify OTP</button>
+                <form>
+                    <label for="otp">OTP</label>
+                    <input type="text" id="otp" placeholder="Enter OTP">
+                    <span id="otp-error" class="error-message"></span>
+                    <button id="verify-otp">Verify OTP</button>
+                </form>
             </div>
         </div>
-    </div>
-    <div></div>
-
     </div>
 
     <script src="Tranquell Login page.js"></script>
